@@ -14,6 +14,11 @@
 #Specify log file
 logfile="tmp/sentineloneinstall.log"
 
+# Delete log file if it already exists
+if [ -f "$logfile" ]; then
+  rm "$logfile"
+fi
+
 # Redirect both stdout and stderr to the log file
 exec > "$logfile" 2>&1
 
