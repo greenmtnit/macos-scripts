@@ -43,7 +43,7 @@ else
   echo "$sentinel_token" > "/tmp/com.sentinelone.registration-token"
 
   # Install Agent
-  /usr/sbin/installer -pkg /tmp/$pkg_name -target "/"
+  /usr/sbin/installer -pkg "/tmp/$pkg_name" -target "/"
 
   # Clean up temporary files
   rm "/tmp/$pkg_name" "/tmp/com.sentinelone.registration-token"
