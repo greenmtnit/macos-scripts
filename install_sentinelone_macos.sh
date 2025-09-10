@@ -12,7 +12,7 @@
 # You must also assign permissions (manually or through MDM) to make SentinelOne full active.
 
 #Specify log file
-logfile="tmp/sentineloneinstall.log"
+logfile="/tmp/sentineloneinstall.log"
 
 # Delete log file if it already exists
 if [ -f "$logfile" ]; then
@@ -23,11 +23,12 @@ fi
 exec > "$logfile" 2>&1
 
 #Your SentinelOne token goes here
-sentinel_token="YOURTOKENHERE="
+#sentinel_token="eyJ1cmwiOiAiaHR0cHM6Ly91c2VhMS1wYXg4LTAzLnNlbnRpbmVsb25lLm5ldCIsICJzaXRlX2tleSI6ICI3ZDAwMDQ3MWI0MmNmNTcwIn0="
 #Your download link goes here
+sentinel_token="YOUR_TOKEN_HERE"
 download_link="YOUR_DOWNLOAD_LINK_HERE"
-#Use this for download_link instead if using Mosyle
-#download_link="%MosyleCDNFile:MOSYLE_UUID_HERE%"
+#Use this for download_link if using Mosyle CDN
+#download_link="%MosyleCDNFile:abc7436e-dbfa-437f-acbe-1234567890%"
 #Your package name goes here
 pkg_name="Sentinel.pkg"
 
